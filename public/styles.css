@@ -30,6 +30,24 @@ body {
   font-weight: 800;
 }
 
+.welcome {
+  border: 1px dotted transparent;
+  background-color: #0d86ae;
+  opacity: .7;
+  font-size: 20px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-right: 5px;
+  color: #30ddd7;
+}
+
+.welcome i {
+  font-weight: 600;
+  color: #05f7ef;
+  border-left: 1px solid #ccc;
+  padding-left: 5px;
+}
+
 .header_logo:after {
   content: "";
   display: block;
@@ -62,8 +80,8 @@ body {
 .delete-btn {
   display: inline-block;
   text-decoration: none;
-  border: 1px solid #999;
-  color: #444;
+  border: 1px solid #ccc;
+  color: #ccc;
   font-weight: 700;
   padding: 10px 20px;
   border-radius: 10px;
@@ -94,18 +112,20 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .form-label {
   margin-bottom: 10px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
+  color: #ccc;
+  text-transform: uppercase;
 }
 
 .signup_card input,
 .signin_card input {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .input {
@@ -141,6 +161,7 @@ body {
   border-radius: 7px;
   width: 200px;
   height: 40px;
+  font-size: 16px;
   color: #666;
   transition: all .3s linear;
 }
@@ -169,9 +190,19 @@ body {
 .products {
   width: 250px;
   text-align: center;
-  border-top: 1px solid #0080007b;
-  border-right: 1px solid #0080007b;
-  border-left: 1px solid #0080007b;
-  margin-bottom: 30px;
-  margin-right: 20px;
+  margin-bottom: 50px;
+  margin-right: 25px;
+}
+
+.products p {
+  color: #ccc;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.products img {
+  width: 250px;
+  border-radius: 7px;
+  margin-bottom: 10px;
 }

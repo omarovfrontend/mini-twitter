@@ -1,41 +1,37 @@
 {{!-- method="post" значит в mainRouter пишем router.post ... --}}
+{{!-- удаление поста --}}
 {{#if userId}}
 <div class="wrapper_form">
 
   <form name="addPost" class="addPost" action="/add" method="post">
     <div class="addPost_card">
       <label for="name" class="form-label">Добавить Пост:</label>
-	    <input class="input" required="required" type="text" name="postName" placeholder="name..." />
+	    <input class="input" required="required" type="text" name="postName" placeholder="название поста***" />
     </div>
-
-	  {{!-- <div class="addPost_card">
-      <label for="examplePassword" class="form-label">Категория Продукта:</label>
-	    <input class="input" required="required" type="text" name="categoryName" placeholder="name..." />
-    </div> --}}
 
 	  <div class="addPost_card">
       <label for="name" class="form-label">Ссылка на картинку:</label>
-	    <input class="input" required type="text" name="img" placeholder="вставьте ссылку..." />
+	    <input class="input" required type="text" name="img" placeholder="вставьте ссылку***" />
     </div>
 
     <button class="addPost_button" type="submit">Добавить</button>
   </form>
   
 
+{{!-- удаление поста --}}
   <div class="card">
-    {{#each products}}
+    {{#each posts}}
       <div class="products">
-        <img style="width: 250px;" src={{this.img}} alt="photo">
-        <p>
-          {{!-- {{this.name}} - {{'Category.name'}} - {{'User.name'}} --}}
-          {{this.name}} - {{'User.name'}}
-        </p>
+        <p>{{this.title}}</p>
+        <img src={{this.img}} alt="photo">
         {{#if owner}}
-        <div data-dataid="{{this.id}}" class="product-inner">
-          <button data-type="delete" id="delete" class="products_delete-btn">Удалить</button>
-        </div>
+          <div data-dataid="{{this.id}}" class="product-inner">
+            <form method="delete" action="/delete/{{this.id}}">
+              <button data-type="delete" id="delete" class="products_delete-btn">Удалить</button>
+            </form>
+          </div>
         {{else}}
-      
+
         {{/if}}
       </div>
     {{/each}}
