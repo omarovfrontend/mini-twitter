@@ -1,5 +1,5 @@
-{{!-- method="post" значит в mainRouter пишем router.post ... --}}
-{{!-- удаление поста --}}
+{{!-- form method="post" => значит в mainRouter пишем router.post --}}
+{{!-- добавление поста --}}
 {{#if userId}}
 <div class="wrapper_form">
 
@@ -19,16 +19,14 @@
   
 
 {{!-- удаление поста --}}
-  <div class="card">
+  <div class="myPosts">
     {{#each posts}}
-      <div class="products">
+      <div class="myPost">
         <p>{{this.title}}</p>
         <img src={{this.img}} alt="photo">
         {{#if owner}}
-          <div data-dataid="{{this.id}}" class="product-inner">
-            <form method="delete" action="/delete/{{this.id}}">
-              <button data-type="delete" id="delete" class="products_delete-btn">Удалить</button>
-            </form>
+          <div data-dataId="{{this.id}}" class="myPost-inner">
+            <button data-type="delete" id={{this.id}} class="myPosts_delete-btn">Удалить</button>
           </div>
         {{else}}
 

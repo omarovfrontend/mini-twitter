@@ -153,7 +153,7 @@ body {
 .addPost_button,
 .signup_button,
 .signin_button,
-.products_delete-btn {
+.myPosts_delete-btn {
   cursor: pointer;
   padding: 7px;
   background-color: #e8f0fe;
@@ -169,39 +169,39 @@ body {
 .addPost_button:hover,
 .signup_button:hover,
 .signin_button:hover,
-.products_delete-btn:hover {
+.myPosts_delete-btn:hover {
   background-color: #60e6e6bd;
   border: 1px solid #000;
 }
 
-.products_delete-btn:hover {
+.myPosts_delete-btn:hover {
   background-color: #ea6d6d;
   color: #fff;
 }
 
 /* main */
-.card {
+.myPosts {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 30px;
 }
-.products {
-  width: 250px;
+.myPost {
+  width: 22%;
   text-align: center;
   margin-bottom: 50px;
   margin-right: 25px;
 }
 
-.products p {
+.myPost p {
   color: #ccc;
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-.products img {
+.myPost img {
   width: 250px;
   border-radius: 7px;
   margin-bottom: 10px;

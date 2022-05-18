@@ -55,10 +55,10 @@ router.post('/signin', async (req, res) => {
       req.session.name = user.name;
       res.redirect('/');
     } else {
-      res.send('Error, Cannot find User!');
+      res.send('Упппссс, не удается найти пользователя ╮( ˘ ､ ˘ )╭');
     }
   } catch (error) {
-    res.send('Cannot find User!');
+    res.send('Хммм, а нет такого пользователя ╮( ˘ ､ ˘ )╭');
   }
 });
 
