@@ -3,4 +3,4 @@
 
 ## To start the project, install the dependencies:
 1. `npm install` - in terminal
-2. `npm start` - to start the project.
+2. `npm start` - start the project.
