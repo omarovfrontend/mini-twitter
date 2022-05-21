@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const bcrypt = require('bcrypt');
 const { User } = require('../db/models');
+const loginMiddleware = require('../middleware/loginMiddleware');
 
 // SIGN UP
-router.get('/signup', (req, res) => {
+router.get('/signup', loginMiddleware, (req, res) => {
   res.render('signup');
 });
 

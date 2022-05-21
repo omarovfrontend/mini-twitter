@@ -18,7 +18,7 @@ function insertPost(post) {
 addPost.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const response = await fetch('/add', {
+  const response = await fetch('/post/add', {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ addPost.addEventListener('submit', async (event) => {
 myPosts.addEventListener('click', async (event) => {
   event.preventDefault();
   if (event.target.className === 'myPosts_delete-btn') {
-    const response = await fetch(`/delete/${event.target.id}`, {
+    const response = await fetch(`/post/delete/${event.target.id}`, {
       method: 'delete',
     });
     if (response.ok) {

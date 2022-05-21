@@ -17,10 +17,10 @@
       <span class="welcome">Добро пожаловать <i>{{this.name}}</i></span>
       <a class="home_btn" href="http://localhost:3000">ГЛАВНАЯ</a>
       {{#if userId}}
-        <a class="logout_btn" href="http://localhost:3000/logout">ВЫЙТИ</a>
+        <a class="logout_btn" href="http://localhost:3000/user/logout">ВЫЙТИ</a>
         {{else}}
-        <a class="signup_btn" href="http://localhost:3000/signup">РЕГИСТРАЦИЯ</a>
-        <a class="signin_btn" href="http://localhost:3000/signin">АВТОРИЗАЦИЯ</a>
+        <a class="signup_btn" href="http://localhost:3000/user/signup">РЕГИСТРАЦИЯ</a>
+        <a class="signin_btn" href="http://localhost:3000/user/signin">АВТОРИЗАЦИЯ</a>
       {{/if}}
     </div>
   </header>
