@@ -1,7 +1,6 @@
 // Добавление поста
 const { addPost } = document.forms;
 const myPosts = document.querySelector('.myPosts');
-const { postName, img } = addPost;
 
 function insertPost(post) {
   return `
@@ -17,6 +16,8 @@ function insertPost(post) {
 
 addPost.addEventListener('submit', async (event) => {
   event.preventDefault();
+
+  const { postName, img } = addPost;
 
   const response = await fetch('/post/add', {
     method: 'post',
