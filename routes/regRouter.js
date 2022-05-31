@@ -23,7 +23,8 @@ router.post('/signup', async (req, res) => {
     });
 
     if (!created) {
-      res.redirect('signup');
+      // res.redirect('signup');
+      res.render('signup', { message: 'Пользователь с таким email уже сущ-ет, создайте нового, или авторизуйтесь! ╮( ˘ ､ ˘ )╭' });
     } else {
       req.session.userId = user.id;
       req.session.email = user.email;
@@ -56,7 +57,8 @@ router.post('/signin', async (req, res) => {
       req.session.name = user.name;
       res.redirect('/');
     } else {
-      res.send('Упппссс, не удается найти пользователя ╮( ˘ ､ ˘ )╭');
+      // res.send('Упппссс, не удается найти пользователя ╮( ˘ ､ ˘ )╭');
+      res.render('signin', { message: 'Упппссс, не удается найти пользователя ╮( ˘ ､ ˘ )╭' });
     }
   } catch (error) {
     res.send('Хммм, а нет такого пользователя ╮( ˘ ､ ˘ )╭');

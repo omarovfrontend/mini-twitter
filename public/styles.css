@@ -13,14 +13,14 @@ body {
 /* layout */
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #607d8b55;
-  padding: 20px 0;
+  padding: 20px 30px;
   margin-bottom: 40px;
 }
 
-.header_logo {
+a.header_logo {
   font-family:'Courier New', Courier, monospace;
   color: #30ddd7;
   position: relative;
@@ -48,7 +48,7 @@ body {
   padding-left: 5px;
 }
 
-.header_logo:after {
+a.header_logo:after {
   content: "";
   display: block;
   position: absolute;
@@ -60,7 +60,7 @@ body {
   transition: width 0.5s;
 }
 
-.header_logo:hover::after {
+a.header_logo:hover::after {
   content: "";
   width: 100%;
   display: block;
@@ -150,6 +150,20 @@ body {
   border-color: #8d8d8d;
 }
 
+.signup_message,
+.signin_message {
+  color: #bef768;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
 .addPost_button,
 .signup_button,
 .signin_button,
@@ -187,6 +201,7 @@ body {
   list-style: none;
   margin-bottom: 30px;
 }
+
 .myPost {
   width: 22%;
   text-align: center;
@@ -205,4 +220,15 @@ body {
   width: 250px;
   border-radius: 7px;
   margin-bottom: 10px;
+}
+
+.myPost-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myPosts_delete-btn {
+  width: 120px;
+  margin-right: 15px;
 }

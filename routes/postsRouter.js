@@ -29,4 +29,22 @@ router.delete('/delete/:id', async (req, res) => {
   res.json({ isUpdatedSuccessful: true });
 });
 
+// ручка для изменения поста
+router.put('/edit/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const {
+      postName, img,
+    } = req.body;
+
+    await Post.update({
+      title: postName, img, user_id: req.session.userId,
+    }, { where: { id } });
+    const testPost = await Post.findByPk(id);
+    res.json(testPost);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
